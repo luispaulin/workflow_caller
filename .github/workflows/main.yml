@@ -13,6 +13,6 @@ jobs:
       - id: foo
         uses: luispaulin/_action_composite_called/actions/action_two@master
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: ${{ secrets.MY_SECRET }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
       - run: python --version
